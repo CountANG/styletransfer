@@ -29,8 +29,8 @@
         size="small"
         type="success"
         @click="submitUpload"
-        >上传到服务器</el-button
-      >
+        >上传到服务器
+      </el-button>
     </div>
     <div v-if="resultImage" style="display: flex">
       <div>
@@ -61,13 +61,14 @@
 </template>
 <style>
 @import "/Users/countang/Desktop/FrontEnd/styletransfer/node_modules/image-compare-viewer/dist/image-compare-viewer.min.css";
+
 #image-compare {
   width: 100%;
 }
+
 .align-center {
   width: 100%;
   height: 4rem;
-  line-height: 4rem;
   display: flex;
   align-items: center;
 }
@@ -75,6 +76,7 @@
 
 <script>
 import ImageCompare from "image-compare-viewer";
+
 export default {
   mounted() {
     const element = document.getElementById("image-compare");
@@ -90,9 +92,9 @@ export default {
       uploadedImageUrl: null,
       selectedStyle: "ink_normal",
       options: [
-        { label: "水墨画风格(原版）", value: "ink_normal" },
-        { label: "水墨画风格(VGG）", value: "ink_vgg" },
-        { label: "水墨画风格(注意力+VGG）", value: "ink_attention_vgg" },
+        { label: "水墨画风格(原版)", value: "ink_normal" },
+        { label: "水墨画风格(VGG)", value: "ink_vgg" },
+        { label: "水墨画风格(注意力+VGG)", value: "ink_attention_vgg" },
         { label: "莫奈风格", value: "monet" },
       ],
     };
